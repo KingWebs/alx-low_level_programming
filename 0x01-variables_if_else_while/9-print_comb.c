@@ -1,15 +1,23 @@
 #include <stdio.h>
+/**
+ * main - main entry point
+ * print combinations of single digit numbers
+ * Return: 0
+ */
 int main(void)
 {
-for (int i = 0; i < 100; i++)
-{
-putchar(i / 10 + '0');
-putchar(i % 10 + '0');
-if (i != 99)
-{
-putchar(' ');
-}
-}
-putchar('\n');
-return (0);
+	int number = '0';
+
+	while (number <= '9')
+	{
+		putchar(number);
+		if (number != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		number++;
+	}
+	putchar('\n');
+	return (0);
 }

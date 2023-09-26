@@ -1,19 +1,32 @@
 #include <stdio.h>
+/**
+ * main - main entry point
+ * print possible combintations of three digits
+ * Return: 0
+ */
 int main(void)
 {
-for (int i = 0; i <= 9; i++)
-{
-for (int j = i + 1; j <= 9; j++)
-{
-putchar(i + '0');
-putchar(j + '0');
-if (i != 8 || j != 9)
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-putchar('\n');
-return (0);
+	int ones;
+	int tens;
+	int hundreds;
+
+	for (hundreds = '0'; hundreds <= '9'; hundreds++)
+	{
+		for (tens = (hundreds + 1); tens <= '9'; tens++)
+		{
+			for (ones = (tens + 1); ones <= '9'; ones++)
+			{
+				putchar(hundreds);
+				putchar(tens);
+				putchar(ones);
+				if (hundreds != '7' || tens != '8' || ones != '9')
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }

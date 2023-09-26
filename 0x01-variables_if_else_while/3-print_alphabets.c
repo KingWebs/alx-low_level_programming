@@ -1,18 +1,24 @@
 #include <stdio.h>
+/**
+ * main - main entry point
+ * print alphabet in lower then upper
+ * Return: 0
+ */
 int main(void)
 {
-char letter = 'a';
-while (letter <= 'z')
-{
-putchar(letter);
-letter++;
-}
-letter = 'A';
-while (letter <= 'Z')
-{
-putchar(letter);
-letter++;
-}
-putchar('\n');
-return (0);
+	char lowercase = 'a';
+	char uppercase = 'A';
+
+	while (lowercase <= 'z')
+	{
+		putchar(lowercase);
+		lowercase++;
+	}
+	while (uppercase <= 'Z')
+	{
+		putchar(uppercase);
+		uppercase++;
+	}
+	putchar('\n');
+	return (0);
 }

@@ -1,10 +1,18 @@
 #include <stdio.h>
+/**
+ * main - main entry point
+ * print numbers
+ * Return: 0
+ */
 int main(void)
 {
-for (char digit = '0'; digit <= '9'; digit++)
-{
-putchar(digit);
-}
-putchar('\n');
-return (0);
+	int number = '0';
+
+	while (number <= '9')
+	{
+		putchar(number);
+		number++;
+	}
+	putchar('\n');
+	return (0);
 }
